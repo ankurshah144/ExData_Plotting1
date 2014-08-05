@@ -21,7 +21,7 @@ datasub$Sub_metering_2 <- as.numeric(datasub$Sub_metering_2)
 ## Date/Time to use in plotting
 x <- strptime(paste(datasub$Date, datasub$Time), "%Y-%m-%d %H:%M:%S")
 
-##Set output
+## Set output
 setwd("~/DS Toolbox/Github/ExData_Plotting1")
 png(filename = 'plot3.png', width = 480, height = 480, units = 'px')
 

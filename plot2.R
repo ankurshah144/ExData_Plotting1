@@ -16,7 +16,7 @@ datasub <- subset(data, data$Date %in% c("1/2/2007", "2/2/2007"))
 datasub$Date <- as.Date(datasub$Date, "%d/%m/%Y")
 datasub$Global_active_power <- as.numeric(datasub$Global_active_power)
 
-##Set output
+## Set output
 setwd("~/DS Toolbox/Github/ExData_Plotting1")
 png(filename = 'plot2.png', width = 480, height = 480, units = 'px')
 
