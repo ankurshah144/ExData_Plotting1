@@ -21,6 +21,10 @@ datasub$Sub_metering_2 <- as.numeric(datasub$Sub_metering_2)
 ## Date/Time to use in plotting
 x <- strptime(paste(datasub$Date, datasub$Time), "%Y-%m-%d %H:%M:%S")
 
+##Set output
+setwd("~/DS Toolbox/Github/ExData_Plotting1")
+png(filename = 'plot3.png', width = 480, height = 480, units = 'px')
+
 ## Create plot to match course project requirements
 with(datasub, plot(x, Sub_metering_1, type="n"
                     , xlab="", ylab="Energy sub metering"))  ## initialize
@@ -32,7 +36,4 @@ legend("topright", pch=NA, lwd=1, lty=1
         , col=c("black", "red", "blue")
         , legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
-setwd("~/DS Toolbox/Github/ExData_Plotting1")
-## Copy to .png file
-dev.copy(png, file="plot3.png", width=480, height=480, units="px")
 dev.off()
