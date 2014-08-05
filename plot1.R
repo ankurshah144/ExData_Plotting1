@@ -17,10 +17,11 @@ datasub$Date <- as.Date(datasub$Date, "%d/%m/%Y")
 ## fread didn't convert "?" to NA even though I used na.strings
 datasub$Global_active_power <- as.numeric(datasub$Global_active_power)
 
+##Set output
+setwd("~/DS Toolbox/Github/ExData_Plotting1")
+png(filename = 'plot1.png', width = 480, height = 480, units = 'px')
+
 ## Create histogram to match course project requirements
 hist(datasub$Global_active_power, col="red"
         , main="Global Active Power", xlab="Global Active Power (kilowatts)")
-setwd("~/DS Toolbox/Github/ExData_Plotting1")
-## Copy to .png file
-dev.copy(png, file="plot1.png", width=480, height=480, units="px")
 dev.off()

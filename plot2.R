@@ -16,13 +16,14 @@ datasub <- subset(data, data$Date %in% c("1/2/2007", "2/2/2007"))
 datasub$Date <- as.Date(datasub$Date, "%d/%m/%Y")
 datasub$Global_active_power <- as.numeric(datasub$Global_active_power)
 
+##Set output
+setwd("~/DS Toolbox/Github/ExData_Plotting1")
+png(filename = 'plot2.png', width = 480, height = 480, units = 'px')
+
 ## Create plot to match course project requirements
 with(datasub
         , plot(strptime(paste(datasub$Date, datasub$Time), "%Y-%m-%d %H:%M:%S")
         , Global_active_power, type="l"
         , xlab="", ylab="Global Active Power (kilowatts)"))
 
-setwd("~/DS Toolbox/Github/ExData_Plotting1")
-## Copy to .png file
-dev.copy(png, file="plot2.png", width=480, height=480, units="px")
 dev.off()
