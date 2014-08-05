@@ -27,7 +27,7 @@ setwd("~/DS Toolbox/Github/ExData_Plotting1")
 png(filename = 'plot4.png', width = 480, height = 480, units = 'px')
 
 ## begin plotting
-par(mfrow=c(2,2))
+par(mfrow=c(2,2), bg = "transparent")
 with(datasub, {
     plot(x, Global_active_power, type="l", xlab="", ylab="Global Active Power")  ## topleft
     plot(x, Voltage, type="l", xlab="datetime", ylab="Voltage")  ## topright

@@ -19,6 +19,7 @@ datasub$Global_active_power <- as.numeric(datasub$Global_active_power)
 ## Set output
 setwd("~/DS Toolbox/Github/ExData_Plotting1")
 png(filename = 'plot2.png', width = 480, height = 480, units = 'px')
+par(bg = "transparent")
 
 ## Create plot to match course project requirements
 with(datasub

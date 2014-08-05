@@ -24,6 +24,7 @@ x <- strptime(paste(datasub$Date, datasub$Time), "%Y-%m-%d %H:%M:%S")
 ## Set output
 setwd("~/DS Toolbox/Github/ExData_Plotting1")
 png(filename = 'plot3.png', width = 480, height = 480, units = 'px')
+par(bg = "transparent")
 
 ## Create plot to match course project requirements
 with(datasub, plot(x, Sub_metering_1, type="n"
